@@ -82,7 +82,7 @@ def prediction():
         data8 = 1
     elif data8=='radio/TV':
         data8 = 5
-    df = pd.read_csv('C:\\Users\\Dell\\complete web development\\Credit Prediction Project\\german_credit_data.csv')
+    df = pd.read_csv('https://raw.githubusercontent.com/abhishekmanglani05/Credit-Prediction-Project/main/german_credit_data.csv')
     df.drop(columns=['Unnamed: 0'], inplace=True)
     missing_values = df.isnull().sum()
     missing_values
