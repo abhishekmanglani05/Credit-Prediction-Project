@@ -36,51 +36,51 @@ def prediction():
     data7 = request.form['duration']
     data8 = request.form['purpose']
     # data9 = request.form['Company Name']
-    if data1 == 'male':
+    if data1.lower() == 'male':
         data1 = 1
-    elif data1 == 'female':
+    elif data1.lower() == 'female':
         data1 = 0
-
-    if data3 == 'own':
+    
+    if data3.lower() == 'own':
         data3 = 1
-    elif data3 == 'free':
+    elif data3.lower() == 'free':
         data3 = 0
-    elif data3=='rent':
+    elif data3.lower() == 'rent':
         data3 = 2
-
-    if data5 == 'NA':
+    
+    if data5.lower() == 'na':
         data5 = 4
-    elif data5 == 'little':
+    elif data5.lower() == 'little':
         data5 = 0
-    elif data5 == 'quite rich':
+    elif data5.lower() == 'quite rich':
         data5 = 2
-    elif data5 == 'rich':
+    elif data5.lower() == 'rich':
         data5 = 3
-    elif data5 == 'moderate':
+    elif data5.lower() == 'moderate':
         data5 = 1
-
-    if data4 == 'NA':
+    
+    if data4.lower() == 'na':
         data4 = 3
-    elif data4 == 'little':
+    elif data4.lower() == 'little':
         data4 = 0
-    elif data4 == 'quite rich':
+    elif data4.lower() == 'quite rich':
         data4 = 4
-    elif data4 == 'rich':
+    elif data4.lower() == 'rich':
         data4 = 2
-    elif data4 == 'moderate':
+    elif data4.lower() == 'moderate':
         data4 = 1
-
-    if data8 == 'education':
+    
+    if data8.lower() == 'education':
         data8 = 3
-    elif data8 == 'business':
+    elif data8.lower() == 'business':
         data8 = 0
-    elif data8 == 'furniture/equipment':
+    elif data8.lower() == 'furniture/equipment':
         data8 = 4
-    elif data8 == 'domestic appliances':
+    elif data8.lower() == 'domestic appliances':
         data8 = 2
-    elif data8 == 'car':
+    elif data8.lower() == 'car':
         data8 = 1
-    elif data8=='radio/TV':
+    elif data8.lower() == 'radio/tv':
         data8 = 5
     df = pd.read_csv('https://raw.githubusercontent.com/abhishekmanglani05/Credit-Prediction-Project/main/german_credit_data.csv')
     df.drop(columns=['Unnamed: 0'], inplace=True)
